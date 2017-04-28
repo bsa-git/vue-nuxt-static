@@ -1,0 +1,73 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Service List</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="media"
+                     v-for="service in services.list.items_1">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                                      <i class="fa fa-square fa-stack-2x text-primary"></i>
+                                      <i :class="[ 'fa', service.icon, 'fa-stack-1x', 'fa-inverse']"></i>
+                                </span>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{ service.title }}</h4>
+                        <p v-html="service.text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media"
+                     v-for="service in services.list.items_2">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                                      <i class="fa fa-square fa-stack-2x text-primary"></i>
+                                      <i :class="[ 'fa', service.icon, 'fa-stack-1x', 'fa-inverse']"></i>
+                                </span>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{ service.title }}</h4>
+                        <p v-html="service.text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media"
+                     v-for="service in services.list.items_3">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                                      <i class="fa fa-square fa-stack-2x text-primary"></i>
+                                      <i :class="[ 'fa', service.icon, 'fa-stack-1x', 'fa-inverse']"></i>
+                                </span>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{ service.title }}</h4>
+                        <p v-html="service.text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+    created: function () {
+        try {
+            //--- Services ---//
+            this.$store.dispatch('receiveServicesList');
+        } catch (error) {
+            this.$store.commit('SET_ERROR', error);
+            this.$router.replace('/error')
+        }
+    },
+    computed: mapGetters({
+        services: 'getServices',
+    }),
+}
+</script>
