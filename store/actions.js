@@ -80,27 +80,35 @@ const iniBootstrapValidation = function (store, params) {// params = {id: "selec
 
 //--- About ---// 
 const receivePersonalData = function (store) {
-    about.getPersonalData(function (personal_data) {
-        store.commit(types.RECEIVE_PERSONAL_DATA, personal_data)
-    })
+    if (_.isEmpty(store.state.about.personal_data)) {
+        about.getPersonalData(function (personal_data) {
+            store.commit(types.RECEIVE_PERSONAL_DATA, personal_data)
+        })
+    }
 };
 
 const receiveBusinessData = function (store) {
-    about.getBusinessData(function (business) {
-        store.commit(types.RECEIVE_BUSINESS_DATA, business)
-    })
+    if (_.isEmpty(store.state.about.business)) {
+        about.getBusinessData(function (business) {
+            store.commit(types.RECEIVE_BUSINESS_DATA, business)
+        })
+    }
 };
 
 const receiveSubscribeData = function (store) {
-    about.getSubscribeData(function (subscribe) {
-        store.commit(types.RECEIVE_SUBSCRIBE_DATA, subscribe)
-    })
+    if (_.isEmpty(store.state.about.subscribe)) {
+        about.getSubscribeData(function (subscribe) {
+            store.commit(types.RECEIVE_SUBSCRIBE_DATA, subscribe)
+        })
+    }
 };
 
 const receiveWidgetsData = function (store) {
-    about.getWidgetsData(function (widgets) {
-        store.commit(types.RECEIVE_WIDGETS_DATA, widgets)
-    })
+    if (_.isEmpty(store.state.about.widgets)) {
+        about.getWidgetsData(function (widgets) {
+            store.commit(types.RECEIVE_WIDGETS_DATA, widgets)
+        })
+    }
 };
 
 //--- Blog ---// 
@@ -117,138 +125,180 @@ const receiveBlogPost = function (store, id) {
 };
 
 const receiveBlogCategories = function (store) {
-    blog.getCategories(function (blog) {
-        store.commit(types.RECEIVE_BLOG_CATEGORIES, blog)
-    })
+    if (_.isEmpty(store.state.blog.categories)) {
+        blog.getCategories(function (blog) {
+            store.commit(types.RECEIVE_BLOG_CATEGORIES, blog)
+        })
+    }
 };
 
 const receiveBlogPopular = function (store) {
-    blog.getPopular(function (blog) {
-        store.commit(types.RECEIVE_BLOG_POPULAR, blog)
-    })
+    if (_.isEmpty(store.state.blog.popular)) {
+        blog.getPopular(function (blog) {
+            store.commit(types.RECEIVE_BLOG_POPULAR, blog)
+        })
+    }
 };
 
 //--- Slider ---//
 const receiveSlider = function (store) {
-    slider.getSlider(function (slider) {
-        store.commit(types.RECEIVE_SLIDER, slider)
-    })
+    if (_.isEmpty(store.state.slider.items)) {
+        slider.getSlider(function (slider) {
+            store.commit(types.RECEIVE_SLIDER, slider)
+        })
+    }
 };
 
 //--- Customers ---//
 const receiveCustomers = function (store) {
-    customers.getCustomers(function (customers) {
-        store.commit(types.RECEIVE_CUSTOMERS, customers)
-    })
+    if (_.isEmpty(store.state.customers.items)) {
+        customers.getCustomers(function (customers) {
+            store.commit(types.RECEIVE_CUSTOMERS, customers)
+        })
+    }
 };
 
 //--- Gallery ---//
 const receiveGallery = function (store) {
-    gallery.getGallery(function (gallery) {
-        store.commit(types.RECEIVE_GALLERY, gallery)
-    })
+    if (_.isEmpty(store.state.gallery.items)) {
+        gallery.getGallery(function (gallery) {
+            store.commit(types.RECEIVE_GALLERY, gallery)
+        })
+    }
 };
 
 const receiveInstagram = function (store) {
-    gallery.getInstagram(function (gallery) {
-        store.commit(types.RECEIVE_INSTAGRAM, gallery)
-    })
+    if (_.isEmpty(store.state.gallery.instagram)) {
+        gallery.getInstagram(function (gallery) {
+            store.commit(types.RECEIVE_INSTAGRAM, gallery)
+        })
+    }
 };
 
 //--- Services ---// 
 const receiveServicesHome = function (store) {
-    services.getServicesHome(function (services) {
-        store.commit(types.RECEIVE_SERVICES_HOME, services)
-    })
+    if (_.isEmpty(store.state.services.home)) {
+        services.getServicesHome(function (services) {
+            store.commit(types.RECEIVE_SERVICES_HOME, services)
+        })
+    }
 };
 
 const receiveServicesAccordion = function (store) {
-    services.getServicesAccordion(function (services) {
-        store.commit(types.RECEIVE_SERVICES_ACCORDION, services)
-    })
+    if (_.isEmpty(store.state.services.accordion)) {
+        services.getServicesAccordion(function (services) {
+            store.commit(types.RECEIVE_SERVICES_ACCORDION, services)
+        })
+    }
 };
 
 const receiveServicesList = function (store) {
-    services.getServicesList(function (services) {
-        store.commit(types.RECEIVE_SERVICES_LIST, services)
-    })
+    if (_.isEmpty(store.state.services.list)) {
+        services.getServicesList(function (services) {
+            store.commit(types.RECEIVE_SERVICES_LIST, services)
+        })
+    }
 };
 
 const receiveServicesPanels = function (store) {
-    services.getServicesPanels(function (services) {
-        store.commit(types.RECEIVE_SERVICES_PANELS, services)
-    })
+    if (_.isEmpty(store.state.services.panels)) {
+        services.getServicesPanels(function (services) {
+            store.commit(types.RECEIVE_SERVICES_PANELS, services)
+        })
+    }
 };
 
 const receiveServicesTabs = function (store) {
-    services.getServicesTabs(function (services) {
-        store.commit(types.RECEIVE_SERVICES_TABS, services)
-    })
+    if (_.isEmpty(store.state.services.tabs)) {
+        services.getServicesTabs(function (services) {
+            store.commit(types.RECEIVE_SERVICES_TABS, services)
+        })
+    }
 };
 
 const receiveServicesPurchase = function (store) {
-    services.getServicesPurchase(function (services) {
-        store.commit(types.RECEIVE_SERVICES_PURCHASE, services)
-    })
+    if (_.isEmpty(store.state.services.purchase)) {
+        services.getServicesPurchase(function (services) {
+            store.commit(types.RECEIVE_SERVICES_PURCHASE, services)
+        })
+    }
 };
 
 //--- Team ---// 
 const receiveTeamInfo = function (store) {
-    team.getInfo(function (info) {
-        store.commit(types.RECEIVE_TEAM_INFO, info)
-    })
+    if (_.isEmpty(store.state.team.info)) {
+        team.getInfo(function (info) {
+            store.commit(types.RECEIVE_TEAM_INFO, info)
+        })
+    }
 };
 
 const receiveTeamMembers = function (store) {
-    team.getMembers(function (members) {
-        store.commit(types.RECEIVE_TEAM_MEMBERS, members)
-    })
+    if (_.isEmpty(store.state.team.members)) {
+        team.getMembers(function (members) {
+            store.commit(types.RECEIVE_TEAM_MEMBERS, members)
+        })
+    }
 };
 
 const receiveTeamSummary = function (store) {
-    team.getSummary(function (summary) {
-        store.commit(types.RECEIVE_TEAM_SUMMARY, summary)
-    })
+    if (_.isEmpty(store.state.team.summary)) {
+        team.getSummary(function (summary) {
+            store.commit(types.RECEIVE_TEAM_SUMMARY, summary)
+        })
+    }
 };
 
 //--- Testimonials ---//
 const receiveTestimonials = function (store) {
-    testimonials.getTestimonials(function (testimonials) {
-        store.commit(types.RECEIVE_TESTIMONIALS, testimonials)
-    })
+    if (_.isEmpty(store.state.testimonials.items)) {
+        testimonials.getTestimonials(function (testimonials) {
+            store.commit(types.RECEIVE_TESTIMONIALS, testimonials)
+        })
+    }
 };
 
 //--- Socials ---//
 const receiveTwitter = function (store) {
-    socials.getTwitter(function (twitter) {
-        store.commit(types.RECEIVE_TWITTER, twitter)
-    })
+    if (_.isEmpty(store.state.socials.twitter)) {
+        socials.getTwitter(function (twitter) {
+            store.commit(types.RECEIVE_TWITTER, twitter)
+        })
+    }
 };
 
 const receiveMySocials = function (store) {
-    socials.getMySocials(function (my_socials) {
-        store.commit(types.RECEIVE_MY_SOCIALS, my_socials)
-    })
+    if (_.isEmpty(store.state.socials.my)) {
+        socials.getMySocials(function (my_socials) {
+            store.commit(types.RECEIVE_MY_SOCIALS, my_socials)
+        })
+    }
 };
 
 const receiveShareSocials = function (store) {
-    socials.getShareSocials(function (share_socials) {
-        store.commit(types.RECEIVE_SHARE_SOCIALS, share_socials)
-    })
+    if (_.isEmpty(store.state.socials.share)) {
+        socials.getShareSocials(function (share_socials) {
+            store.commit(types.RECEIVE_SHARE_SOCIALS, share_socials)
+        })
+    }
 };
 
 //--- Faq ---//
 const receiveFaq = function (store) {
-    faq.getFaq(function (faq) {
-        store.commit(types.RECEIVE_FAQ, faq)
-    })
+    if (_.isEmpty(store.state.faq.items)) {
+        faq.getFaq(function (faq) {
+            store.commit(types.RECEIVE_FAQ, faq)
+        })
+    }
 };
 
 //--- Welcome ---//
 const receiveWelcome = function (store) {
-    welcome.getWelcome(function (welcome) {
-        store.commit(types.RECEIVE_WELCOME, welcome)
-    })
+    if (_.isEmpty(store.state.welcome.items)) {
+        welcome.getWelcome(function (welcome) {
+            store.commit(types.RECEIVE_WELCOME, welcome)
+        })
+    }
 };
 
 //--- Pricing ---//

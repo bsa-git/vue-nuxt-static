@@ -25,10 +25,10 @@ import { mapGetters } from 'vuex'
 export default {
     created: function () {
         try {
-            const e = new Error('Faq Error');
-            e.name = 'FaqError';
-            e.statusCode = 401;
-            throw e;
+//            const e = new Error('Faq Error');
+//            e.name = 'FaqError';
+//            e.statusCode = 401;
+//            throw e;
 
             //--- Faq ---//
             this.$store.dispatch('receiveFaq');
