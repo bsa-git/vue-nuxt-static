@@ -60,7 +60,7 @@ import { mapActions } from 'vuex'
 export default {
     data: function () {
         return {
-            urlForm: "bin/contact_me.php"
+            urlForm: "/bin/contact_me.php"
         }
     },
     mounted: function () {

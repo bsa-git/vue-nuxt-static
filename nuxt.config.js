@@ -40,6 +40,7 @@ module.exports = {
                 rel: 'stylesheet',
                 href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'
             },
+            {rel: 'stylesheet', href: '/css/animate.css'},
             {rel: 'stylesheet', href: '/css/style.css'},
         ]
     },
@@ -58,7 +59,7 @@ module.exports = {
     /*
      ** Global CSS
      */
-    css: ['~/assets/css/animate.css'],
+    css: [],// '~/assets/css/animate.css'
     /*
      ** Customize the progress-bar color
      */
