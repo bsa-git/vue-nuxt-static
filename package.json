@@ -1,5 +1,5 @@
 {
-  "name": "vue-nuxtjs-starter",
+  "name": "vue-nuxt-static",
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "bsa-git <bsa2657@yandex.ru>",
@@ -16,10 +16,6 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "heroku-postbuild": "npm run build"
-  },
-  "devDependencies": {
-    "push-dir": "^0.4.1"
   }
 }
