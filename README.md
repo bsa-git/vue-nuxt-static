@@ -4,7 +4,7 @@
 
 ## About
 
-This project uses [Nuxt.js](http://feathersjs.com). Nuxt.js is a framework for creating Universal [Vue.js](https://vuejs.org) Applications.
+This project uses [Nuxt.js](https://nuxtjs.org/). Nuxt.js is a framework for creating Universal [Vue.js](https://vuejs.org) Applications.
 
 Its main scope is UI rendering while abstracting away the client/server distribution.
 
