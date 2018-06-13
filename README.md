@@ -2,6 +2,8 @@
 
 > Nuxt.js project for creating universal [Vue.js](https://vuejs.org) Applications
 
+**Live Demo**: https://vue-nuxt-static.herokuapp.com/
+
 ## About
 
 This project uses [Nuxt.js](https://nuxtjs.org/). Nuxt.js is a framework for creating Universal [Vue.js](https://vuejs.org) Applications.
